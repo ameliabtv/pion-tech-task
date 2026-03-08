@@ -54,7 +54,6 @@ coalesce(l.lifetime_value, 0) as lifetime_value,
 s.current_subscription_status,
 
 sa.first_subscription_start_date,
-sa.latest_subscription_start_date,
 coalesce(sa.total_subscription_count, 0) as total_subscription_count,
 coalesce(sa.active_subscription_count, 0) as active_subscription_count
 
