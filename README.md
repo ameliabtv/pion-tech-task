@@ -11,7 +11,7 @@ The objective was to build the **Intermediate** and **Marts** layers on top of t
 
 The solution is designed to make the data easier to use for self-service reporting by the Marketing and Finance teams.
 
----
+
 
 ## Data Model Architecture
 
