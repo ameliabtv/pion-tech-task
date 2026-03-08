@@ -1,0 +1,47 @@
+version: 2
+
+models:
+
+  - name: int_subscriptions_enriched
+    description: Intermediate model joining subscriptions with plan information to attach pricing and plan attributes to each subscription record.
+
+    columns:
+      - name: subscription_id
+        description: Unique identifier for the subscription.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Customer associated with the subscription.
+        tests:
+          - not_null
+
+      - name: plan_id
+        description: Identifier of the subscription plan.
+
+      - name: monthly_cost
+        description: Monthly cost of the subscription plan.
+
+      - name: subscription_start_date
+        description: Date when the subscription started.
+
+      - name: subscription_end_date
+        description: Date when the subscription ended, if applicable.
+
+
+  - name: int_subscription_months
+    description: Intermediate model expanding subscriptions into monthly records. Each row represents a subscription active in a given month.
+
+    columns:
+      - name: subscription_id
+        description: Subscription identifier.
+
+      - name: customer_id
+        description: Customer identifier.
+
+      - name: revenue_month
+        description: Month in which the subscription generated recurring revenue.
+
+      - name: monthly_cost
+        description: Monthly cost attributed to the subscription.
