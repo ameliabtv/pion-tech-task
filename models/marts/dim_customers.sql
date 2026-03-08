@@ -31,10 +31,10 @@ group by customer_id
 subscription_agg as (
 select
 customer_id,
-min(subscription_start_date) as first_subscription_start_date,
+min(start_date) as first_subscription_start_date,
 count(distinct subscription_id) as total_subscription_count,
-sum(case when subscription_end_date is null
-or subscription_end_date >= current_date then 1
+sum(case when end_date is null
+or end_date >= current_date then 1
 else 0 end) as active_subscription_count
 
 from subscriptions
