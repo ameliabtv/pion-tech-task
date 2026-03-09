@@ -1,3 +1,5 @@
+{{ config(materialized='view') }}
+  
 with subscriptions_enriched as (
   select * from {{ ref('int_subscriptions_enriched') }}
 ),
