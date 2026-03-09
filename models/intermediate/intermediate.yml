@@ -23,10 +23,10 @@ models:
       - name: monthly_cost
         description: Monthly cost of the subscription plan.
 
-      - name: subscription_start_date
+      - name: start_date
         description: Date when the subscription started.
 
-      - name: subscription_end_date
+      - name: end_date
         description: Date when the subscription ended, if applicable.
 
 
